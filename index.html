@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- tailwinds css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>E Wallet</title>
+</head>
+<body>
+    <h1 class="text-5xl font-bold text-center m-6 text-indigo-600">E-wallet💰</h1>
+    <section class="flex flex-wrap">
+        <div>
+            <img class="w-11/12 my-0 mx-auto rounded-lg h-full" src="img/digital-walet.jpg" alt=""> 
+        </div>
+        <div class="text-center mx-auto p-1 bg-neutral-100 rounded-lg">
+            
+            <!--------- income area -------->
+            <h4 class="font-semibold text-2xl">Income</h4>
+            <p class="inline text-xl font-medium">Income:</p>
+            <input id="total-income" type="text" placeholder="Enter your income" class="bg-gray-200 py-2 px-4 mt-3 rounded-md text-xl w-9/12">
+            <p id="incomeField-error" class="text-red-600 hidden">**you didn't enter you income amount.</p>
+            
+            <!-------- Expenses area -------->
+            <h4 class="font-semibold text-2xl m-3">Expenses</h4>
+            <div>
+                <p class="inline text-xl font-medium">Food:</p>
+                <input id="expense-in-food" type="text" placeholder="Enter you expense in Food" class="bg-gray-200 py-2 px-4 m-2 rounded-md text-xl w-9/12">
+                <p id="foodField-error" class="text-red-600 hidden">**you didn't enter you food amount.</p>
+            </div>
+            <div>
+                <p class="inline text-xl font-medium">Rent:</p>
+                <input id="expense-in-rent" type="text" placeholder="Enter you expense in Rent" class="bg-gray-200 py-2 m-2 px-4 rounded-md text-xl w-9/12">
+                <p id="rentField-error" class="text-red-600 hidden">**you didn't enter you rent amount.</p>
+            </div>
+            <div>
+                <p class="inline text-xl font-medium">Cloth:</p>
+                <input id="expense-in-cloth" type="text" placeholder="Enter you expense in Cloth" class="bg-gray-200 py-2 px-4 mt-2 mb-2 rounded-md text-xl w-9/12">
+                <p id="clothField-error" class="text-red-600 hidden">**you didn't enter you cloth amount.</p>
+            </div>
+            <button id="calculate-btn" class="px-8 py-2 mt-4 rounded-lg bg-indigo-500 text-xl text-white font-medium">Calculate</button>
+            <!-- negative number warning -->
+            <p id="negativeNum-error" class="text-red-600 hidden">**Negative number is not acceptable.</p>
+            <!-- string input warning -->
+            <p id="string-error" class="text-red-600 hidden">**please give a number.String is not acceptable.</p>
+            
+            <!--------- total -------->
+            <h3 class="font-bold text-2xl mt-4 mb-3">Total Expenses: <span id="total-expense">0</span> </h3>
+            <!--erroe hendeler if total expense is greter then income  -->
+            <p id="expense-error" class="text-red-600 hidden">**invalid input.please fill properly.</p>
+            <h3 class="font-bold text-2xl mt-3 mb-2">Balance: <span id="total-balance">0</span></h3>
+            
+            <!-------- saving area --------->
+            <p class="inline text-xl font-medium mt-3">Save:</p>
+            <input id="saving-persentage" type="text" placeholder="%Saving" class="bg-gray-200 py-2 px-4 mt-2 mb-3 rounded-md text-xl font-medium w-1/3"><span class="mx-3 font-semibold">%</span>
+            <button id="save-btn" class="px-6 py-2 rounded-lg bg-indigo-500 text-xl text-white font-medium">Save</button>
+            
+            <!--------- Summary ------->
+            <p id="great-saving-error" class="text-red-600 hidden">**Savings amount can't be greater then Total income.</p>
+            <p id="nan-saving-error" class="text-red-600 hidden">**please input number of parsentage %</p>
+            <h3 class="font-bold text-2xl mt-3 mb-2">Saving Amount: <span id="saving-amount">0</span> </h3>
+            <h3 class="font-bold text-2xl mt-3 mb-6">Remaining Balance: <span id="remaining-balance">0</span></h3>
+        </div>
+    </section>
+    <script src="js/script.js"></script>
+</body>
+</html>
